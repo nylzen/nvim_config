@@ -28,7 +28,21 @@ keymap.set("n", "<S-tab>", ":BufferLineCyclePrev<CR>", { desc = "Previous buffer
 keymap.set("n", "<leader>q", ":bdelete<CR>", { desc = "Close buffer" })
 
 -- Lazy
-keymap.set("n", '<leader>L', ':Lazy<CR>', { desc = "Lazy load" })
+keymap.set("n", "<leader>L", ":Lazy<CR>", { desc = "Lazy load" })
 
 -- Save file
-keymap.set("n", '<leader>w', ':w<CR>', { desc = "Save file" })
+keymap.set("n", "<leader>w", ":w<CR>", { desc = "Save file" })
+keymap.set({"i","x","n","s"}, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
+
+-- Move lines
+keymap.set("n", "<A-j>", "<cmd>m .+1<CR>==", { desc = "Move line down" })
+keymap.set("n", "<A-k>", "<cmd>m .-2<CR>==", { desc = "Move line up" })
+keymap.set("i", "<A-j>", "<esc><cmd>m .+1<CR>==gi", { desc = "Move line down" })
+keymap.set("i", "<A-k>", "<esc><cmd>m .+1<CR>==gi", { desc = "Move line up" })
+keymap.set("v", "<A-j>",":m '>+1<cr>gv=gv", { desc = "Move line down" })
+keymap.set("v", "<A-k>",":m '<-2<cr>gv=gv", { desc = "Move line up" })
+
+-- better indenting
+keymap.set("v", "<", "<gv", { desc = "Indent left" })
+keymap.set("v", ">", ">gv", { desc = "Indent right" })
+
