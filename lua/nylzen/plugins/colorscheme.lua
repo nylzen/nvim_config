@@ -8,14 +8,14 @@
 } ]]
 
 -- one dark
---[[ return {
+return {
   "navarasu/onedark.nvim",
   priority = 1000,
   config = function()
     local onedark = require("onedark")
 
     onedark.setup({
-      style = "deep",
+      style = "darker",
       transparent = false,
       term_colors = false,
 
@@ -25,10 +25,10 @@
     })
     vim.cmd("colorscheme onedark")
   end,
-} ]]
+}
 
 -- cyberdream
-return {
+--[[ return {
   "scottmckendry/cyberdream.nvim",
   lazy = false,
   priority = 1000,
@@ -43,4 +43,4 @@ return {
     })
     vim.cmd("colorscheme cyberdream") -- set the colorscheme
   end,
-}
+} ]]

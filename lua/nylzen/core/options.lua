@@ -15,6 +15,9 @@ opt.autoindent = true -- copy indent from current line when starting new one
 opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
 
+opt.cursorline = true -- highlight current line
+opt.cursorlineopt = "screenline" -- highlight the whole line
+
 -- turn on termguicolors
 opt.termguicolors = true
 opt.background = "dark"
