@@ -26,6 +26,7 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 keymap.set("n", "<tab>", ":BufferLineCycleNext<CR>", { desc = "Next buffer" })
 keymap.set("n", "<S-tab>", ":BufferLineCyclePrev<CR>", { desc = "Previous buffer" })
 keymap.set("n", "<leader>q", ":bdelete<CR>", { desc = "Close buffer" })
+keymap.set("n", "<leader>bdo", ":BufferLineCloseOthers<CR>", { desc = "Close other editors" })
 
 -- Lazy
 keymap.set("n", "<leader>L", ":Lazy<CR>", { desc = "Lazy load" })
@@ -46,3 +47,6 @@ keymap.set("v", "<A-k>",":m '<-2<cr>gv=gv", { desc = "Move line up" })
 keymap.set("v", "<", "<gv", { desc = "Indent left" })
 keymap.set("v", ">", ">gv", { desc = "Indent right" })
 
+-- codeshot
+keymap.set('v', "<leader>sc", ":SSSelected<CR>", { desc = "Capture selected code" })
+keymap.set('v', "<leader>sh", ":SSFocused<CR>", { desc = "Capture current file" })
