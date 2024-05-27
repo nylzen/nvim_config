@@ -1,14 +1,14 @@
 -- CarbonFox
---[[ return {
+return {
   "EdenEast/nightfox.nvim",
   priority = 1000,
   config = function()
     vim.cmd("colorscheme carbonfox")
   end,
-} ]]
+}
 
 -- one dark
-return {
+--[[ return {
   "navarasu/onedark.nvim",
   priority = 1000,
   config = function()
@@ -26,6 +26,7 @@ return {
     vim.cmd("colorscheme onedark")
   end,
 }
+]]
 
 -- cyberdream
 --[[ return {
@@ -44,3 +45,4 @@ return {
     vim.cmd("colorscheme cyberdream") -- set the colorscheme
   end,
 } ]]
+
